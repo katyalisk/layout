@@ -1,0 +1,120 @@
+:root {
+    --pdg: 15px;
+    --fw: 600;
+
+    --main-color: #F9F9F9;
+    --bg: #FFFFFF;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    background-color: var(--bg);
+}
+
+/* --- Header --- */
+.filter-list {
+    height: 5vh;
+    padding: 0 var(--pdg);
+    display: flex;
+    align-items: center;
+    user-select: none;
+    background-color: var(--main-color);
+}
+
+.db-title {
+    margin-right: auto;
+    font-weight: var(--fw);
+}
+
+.filter-name {
+    font-weight: var(--fw);
+}
+
+.filter-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter {
+    display: inline-block;
+    position: relative;
+    margin-right: var(--pdg);
+}
+
+.filter>ul {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    z-index: 1;
+    display: none;
+    min-width: 210px;
+    max-width: 700px;
+    max-height: 550px;
+    white-space: nowrap;
+    overflow-y: auto;
+    overflow: hidden;
+
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+}
+
+.filter:hover>ul {
+    display: block;
+}
+
+/* Buttons */
+.filter-list button {
+    align-self: stretch;
+    font-weight: var(--fw);
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0 var(--pdg);
+    border: none;
+    background-color: #EBEBEB;
+}
+
+.filter-list button:hover {
+    background-color: #D3D3D3;
+}
+
+.filter-list button:active {
+    background-color: #BCBCBC;
+}
+
+/* --- Chart Container --- */
+.container {
+    height: 95vh;
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(7, 8fr);
+    grid-template-rows: repeat(6, 8fr);
+    grid-auto-flow: dense;
+    gap: var(--pdg);
+
+    background-color: var(--bg);
+}
+
+.container>div {
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+
+.wide-cell {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: span 2;
+}
+
+.regular-cell {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}

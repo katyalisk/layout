@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <title>Concept</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/bullets.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+</head>
+
+<body>
+    <div class="filter-list">
+        <div class="db-title">Novo Packaging BB: Deliveries Dashboard</div>
+        <ul>
+            <li class="filter">
+                <span class="filter-name">Mill:</span> <span id="mill-value">All</span>
+                <ul id="mill">
+                    <li class="mainCheckbox"><input type="checkbox" name="mill" class="checkAll" value="All">All</li>
+                    <li><input type="checkbox" name="mill" value="AZ">AZ</li>
+                    <li><input type="checkbox" name="mill" value="BB">BB</li>
+                    <li><input type="checkbox" name="mill" value="LU">LU</li>
+                </ul>
+            </li>
+            <li class="filter">
+                <span class="filter-name">Time Interval:</span> <span id="interval-value"></span>
+            </li>
+            <li class="filter">
+                <span class="filter-name">Sales Area:</span> <span id="region-value">All</span>
+                <ul id="region"></ul>
+            </li>
+            <li class="filter">
+                <span class="filter-name">Transport Company:</span> <span id="trcomp-value">All</span>
+                <ul id="trComp"></ul>
+            </li>
+            <li class="filter">
+                <span class="filter-name">Delivery Type:</span> <span id="deltype-value">All</span>
+                <ul id="deltype"></ul>
+            </li>
+        </ul>
+        <button id="apply-button">Apply</button>
+        <div class="vertical-line"></div>
+        <button id="clear-button">Clear Filters</button>
+    </div>
+
+    <div class="container">
+        <div class="wide-cell"></div>
+        <div class="wide-cell"></div>
+        <div class="wide-cell"></div>
+
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    
+        <div class="regular-cell"></div>
+        <div class="regular-cell"></div>
+        <div class="regular-cell"></div>
+        <div class="regular-cell"></div>
+    </div>
+
+</body>
+
+</html>
